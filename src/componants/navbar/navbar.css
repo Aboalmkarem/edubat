@@ -1,0 +1,26 @@
+:root {
+    --main: #CC8C18;
+    --span: #CC8C18;
+    --backgroundA: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
+    --mainDark: #313538;
+    --textColor: #fff;
+    --iBack: #FAF3E7;
+}
+
+[data-theme="dark"] {
+    --main: #282c34;
+    --backgroundA: linear-gradient(#1d232a98, #1D232A);
+    --textColor: #A6ADBB;
+    --iBack: #f1e4cd;
+}
+
+/* .theme {
+    position: fixed;
+    top: 1.7rem;
+    right: 1.5rem;
+    z-index: 11;
+}
+
+.theme .sun, .theme .moon {
+    color: var(--iBack);
+} */
