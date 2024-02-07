@@ -1,6 +1,7 @@
 import './App.css';
 import useLocalStorage from 'use-local-storage';
 import Navbar from './componants/navbar/navbar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
 
@@ -9,7 +10,13 @@ function App() {
 
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
-      <Navbar isChecked={isDark} handleChange={() => {setIsDark(!isDark)}}></Navbar>
+      <BrowserRouter>
+      
+        <Navbar isChecked={isDark} handleChange={() => {setIsDark(!isDark)}}></Navbar>
+        <Routes>
+          {/* <Route path='/' element={<Home></Home>}></Route> */}
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

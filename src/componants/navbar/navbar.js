@@ -1,9 +1,15 @@
 import './navbar.css'
+import { Link, NavLink } from 'react-router-dom';
+import { FaBars, FaBell, FaHeadphones, FaHome, FaRing, FaSearch, FaUser, FaWallet } from "react-icons/fa";
+// import {useRef} from 'react';
 
-const Navbar = ({isChecked, handleChange}) => {
+const Navbar = ({isChecked, handleChange}) => { 
+
+    // const navRef = useRef();
 
     return (
-        <>
+        <div className='nav'>
+            <Link to='/logo'>Logo</Link>
             <div className="theme">
                 <div>
                     <label className="swap swap-rotate">
@@ -16,8 +22,16 @@ const Navbar = ({isChecked, handleChange}) => {
                     </label>
                 </div>
             </div>
-            
-        </>
+            <FaSearch></FaSearch>
+            <Link to='./wallet'>
+                <div className='wallet'>
+                    <p>0 جنيه</p>
+                    <FaWallet></FaWallet>
+                </div>
+            </Link>
+            <FaBell></FaBell>
+            <FaUser></FaUser>
+        </div>
     )
 }
 
