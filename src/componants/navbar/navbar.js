@@ -8,7 +8,7 @@ const Navbar = ({isChecked, handleChange}) => {
 
     return (
         <div className='nav'>
-            <Link to='/logo'><img src={logo}></img></Link>
+            <Link to='/'><img src={logo}></img></Link>
             <div className="theme">
                 <div>
                     <label className="swap swap-rotate">
