@@ -1,15 +1,14 @@
 import './navbar.css'
+import logo from '../../Assets/logo1.png'
 import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaBell, FaHeadphones, FaHome, FaRing, FaSearch, FaUser, FaWallet } from "react-icons/fa";
-// import {useRef} from 'react';
 
 const Navbar = ({isChecked, handleChange}) => { 
 
-    // const navRef = useRef();
 
     return (
         <div className='nav'>
-            <Link to='/logo'>Logo</Link>
+            <Link to='/logo'><img src={logo}></img></Link>
             <div className="theme">
                 <div>
                     <label className="swap swap-rotate">
@@ -22,15 +21,19 @@ const Navbar = ({isChecked, handleChange}) => {
                     </label>
                 </div>
             </div>
-            <FaSearch></FaSearch>
-            <Link to='./wallet'>
-                <div className='wallet'>
-                    <p>0 جنيه</p>
-                    <FaWallet></FaWallet>
-                </div>
-            </Link>
-            <FaBell></FaBell>
-            <FaUser></FaUser>
+            <div className='float'>
+                <FaSearch></FaSearch>
+                <Link to='./wallet'>
+                    <div className='wallet'>
+                        <p>0 جنيه</p>
+                        <span  className='w-icon'>
+                            <FaWallet></FaWallet>
+                        </span>
+                    </div>
+                </Link>
+                <FaBell></FaBell>
+                <FaUser></FaUser>
+            </div>
         </div>
     )
 }
