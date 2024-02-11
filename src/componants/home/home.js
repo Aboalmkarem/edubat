@@ -12,8 +12,52 @@ const Home = () => {
             {
                 id:"0",
                 class:"card course",
-                img:"url",
-                content:"text",
+                img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
+                name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
+                info:"يناير 2024",
+                isSub:"انت مشترك في هذا الكورس",
+                editDate:"الثلاثاء، ٢٣ يناير ٢٠٢٤",
+                publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
+            },
+            {
+                id:"0",
+                class:"card course",
+                img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
+                name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
+                info:"يناير 2024",
+                isSub:"انت مشترك في هذا الكورس",
+                editDate:"الثلاثاء، ٢٣ يناير ٢٠٢٤",
+                publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
+            },
+            {
+                id:"0",
+                class:"card course",
+                img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
+                name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
+                info:"يناير 2024",
+                isSub:"انت مشترك في هذا الكورس",
+                editDate:"الثلاثاء، ٢٣ يناير ٢٠٢٤",
+                publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
+            },
+            {
+                id:"0",
+                class:"card course",
+                img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
+                name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
+                info:"يناير 2024",
+                isSub:"انت مشترك في هذا الكورس",
+                editDate:"الثلاثاء، ٢٣ يناير ٢٠٢٤",
+                publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
+            },
+            {
+                id:"0",
+                class:"card course",
+                img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
+                name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
+                info:"يناير 2024",
+                isSub:"انت مشترك في هذا الكورس",
+                editDate:"الثلاثاء، ٢٣ يناير ٢٠٢٤",
+                publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
             },
         ]
     )
@@ -22,8 +66,12 @@ const Home = () => {
             {
                 id:"0",
                 class:"card other-course",
-                img:"url",
-                content:"text",
+                img:"https://api.bassthalk.com/courses_images/ktgEiDKxLGPTMwYNxckUL9ycM4il1ipdohlp8TcB.jpg",
+                name:"الاختبار الشامل الثاني- محمد صلاح 3ث (أونلاين)",
+                info:"محتوى الامتحان:نحو: الوحدة الأولى - الوحدة الثانية (حتى اسم الآلة) + الوحدة الثالثة كاملةأدب: الاتجاه الوجدانيقراءة و نصوص (متحرر)تعبير: الأنماط ( ٣ - ٤ - ٥)قصة: الفصول ( ٣-٤ - ٥ -٦)بلاغة شاملة ( ما تم شرحه من بداية السنة)",
+                isSub:"انت مشترك في هذا الكورس",
+                editDate:"الجمعة، ٨ ديسمبر ٢٠٢٣",
+                publishDate:"الاثنين، ٢٧ نوفمبر ٢٠٢٣",
             },
         ]
     )
@@ -41,7 +89,11 @@ const Home = () => {
                                     id =   {course.id}
                                     img =  {course.img}
                                     class = {course.class}
-                                    content = {course.content}
+                                    name = {course.name}
+                                    info = {course.info}
+                                    isSub = {course.isSub}
+                                    editDate = {course.editDate}
+                                    publishDate = {course.publishDate}
                                 />
                             )
                         })}
@@ -60,7 +112,11 @@ const Home = () => {
                                     id =   {course.id}
                                     img =  {course.img}
                                     class = {course.class}
-                                    content = {course.content}
+                                    name = {course.name}
+                                    info = {course.info}
+                                    isSub = {course.isSub}
+                                    editDate = {course.editDate}
+                                    publishDate = {course.publishDate}
                                 />
                             )
                         })}

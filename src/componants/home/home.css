@@ -14,10 +14,90 @@
     padding: 1rem 3rem;
 }
 
-.home .cards.courses {
+.home .cards {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    padding-inline: 2rem;
+}
+
+.home .card-img {
+    min-width: 30rem;
+    overflow: hidden;
+    border-radius: .7rem;
+}
+
+.home .card-content {
+    display: flex;
+    min-width: 20rem;
+    min-height: max-content;
+    margin-inline: 1.4rem;
+    margin-top: -2rem;
+    padding: 1rem;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--card);
+    color: #A6ADBB;
+    border: 2px solid #11baf0;
+    font-size: 1rem;
+    border-radius: .5rem;
+    /* text-wrap: balance; */
+}
+
+.home .card-content h2 {
+    padding: 0;
+    font-size: 1.4rem;
+    color: var(--text);
+}
+
+.home .card-content .row1 {
+    display: flex;
+}
+
+.home .card-content .col1 {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .card-content .col1 h2 {
+    padding: .2rem .2rem 1rem;
+}
+
+.home .card-content .col1 hr {
+    border: 1px solid #11baf0;
+}
+
+.home .card-content .col1 div {
+    padding: .7rem 0 1.7rem;
+}
+
+.home .card-content #hr {
+    margin-inline: 2.7rem;
+    padding-bottom: .7rem;
+    border-top: .1px solid #56585c69;
+}
+
+.home .card-content .isSubscribed {
+    display: flex;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    padding-right: .8rem;
+}
+
+.home .card-content .isSubscribed button {
+    pointer-events: none;
+    width: 7.5rem;
+    height: 4.5rem;
+    color: #11baf0;
+    border: 1px solid #11baf0;
+    border-radius: .4rem;
+    background-color: #2fcbff2d;
+}
+
+.home .card-content .row2 {
+    display: flex;
     
-    background-color: aliceblue;
 }

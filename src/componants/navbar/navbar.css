@@ -1,16 +1,18 @@
 :root {
     --main: #CC8C18;
     --span: #CC8C18;
+    --card: #e7f8fd;
     --backgroundA: linear-gradient(rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
     --mainDark: #313538;
-    --textColor: #fff;
+    --text: #111827;
     --iBack: #FAF3E7;
 }
 
 [data-theme="dark"] {
     --main: #282c34;
+    --card: #111827;
     --backgroundA: linear-gradient(#1d232a98, #1D232A);
-    --textColor: #A6ADBB;
+    --text: #fff;
     --iBack: #f1e4cd;
 }
 
@@ -33,6 +35,8 @@
     backdrop-filter: blur(7px);
     display: flex;
     direction: ltr;
+    font-size: 1.4rem;
+    z-index: 10;
 }
 
 .nav {
