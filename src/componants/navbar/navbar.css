@@ -25,15 +25,24 @@
     color: var(--iBack);
 } */
 
-.nav {
+.navbar {
     position: fixed;
     top: 0;
-    transform: translateX(10%);
+    width: 100%;
+    height: 6rem;
+    backdrop-filter: blur(7px);
+    display: flex;
+    direction: ltr;
+}
+
+.nav {
     display: flex;
     align-items: center;
-    min-width: 80%;
-    height: 6rem;
+    width: 80%;
+    margin: auto;
+    height: 100%;
     gap: 1rem;
+    
 }
 
 .nav img {

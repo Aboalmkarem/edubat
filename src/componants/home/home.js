@@ -1,30 +1,73 @@
 import { Link } from 'react-router-dom'
 import './home.css'
-import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa'
+import Card from './card'
+import { useState } from 'react';
 
 
 const Home = () => {
+    
+    let showEmplyees = true;
+    let [courses, setCourses] = useState( 
+        [
+            {
+                id:"0",
+                class:"card course",
+                img:"url",
+                content:"text",
+            },
+        ]
+    )
+    let [otherCourses, setOtherCourses] = useState( 
+        [
+            {
+                id:"0",
+                class:"card other-course",
+                img:"url",
+                content:"text",
+            },
+        ]
+    )
 
     return (
         <div className='home'>
             <h2>اشتراكاتك</h2>
             <h3>كورساتي</h3>
             <div className='cards courses'>
-                <div className='card course'>
-                    <div className='card-img'><img></img></div>
-                    <div className='course-content'>
-
-                    </div>
-                </div>
+                {showEmplyees ? ( 
+                    <>
+                        {courses.map((course) => {
+                            return(
+                                <Card 
+                                    id =   {course.id}
+                                    img =  {course.img}
+                                    class = {course.class}
+                                    content = {course.content}
+                                />
+                            )
+                        })}
+                    </> )
+                :(
+                    <p>error 404</p>
+                )}
             </div>
             <h3>كورسات اخري</h3>
             <div className='cards other-courses'>
-                <div className='card other-course'>
-                    <div className='card-img'><img></img></div>
-                    <div className='other-course-content'>
-
-                    </div>
-                </div>
+                {showEmplyees ? ( 
+                    <>
+                        {otherCourses.map((course) => {
+                            return(
+                                <Card 
+                                    id =   {course.id}
+                                    img =  {course.img}
+                                    class = {course.class}
+                                    content = {course.content}
+                                />
+                            )
+                        })}
+                    </> )
+                :(
+                    <p>error 404</p>
+                )}
             </div>
             <hr></hr>
             <div className='to-account'>
@@ -66,17 +109,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <footer>
-                <div><img></img></div>
-                <div className='hotNum'>الخط الساخن: <span>16546</span></div>
-                <div className='social midea'>
-                    <FaYoutube></FaYoutube>
-                    <FaFacebook></FaFacebook>
-                    <FaInstagram></FaInstagram>
-                    <FaTiktok></FaTiktok>
-                </div>
-                <p>تم صنع هذه المنصة بهدف تهيئة الطالب لـ كامل جوانب الثانوية العامة و ما بعدها</p>
-            </footer>
         </div>
     )
 }

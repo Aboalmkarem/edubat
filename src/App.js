@@ -3,6 +3,7 @@ import useLocalStorage from 'use-local-storage';
 import Navbar from './componants/navbar/navbar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './componants/home/home';
+import Footer from './componants/footer/footer';
 
 function App() {
 
@@ -12,12 +13,12 @@ function App() {
   return (
     <div className="App" data-theme={isDark ? "dark" : "light"}>
       <BrowserRouter>
-      
         <Navbar isChecked={isDark} handleChange={() => {setIsDark(!isDark)}}></Navbar>
         <Routes>
-          <Route path='/' element={<Home></Home>}></Route>
-          
+          <Route path='/edubat' element={<Home></Home>}></Route>
+
         </Routes>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

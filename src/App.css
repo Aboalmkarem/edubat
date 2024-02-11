@@ -2,9 +2,11 @@
   background-color: var(--main);
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   font-size: calc(15px + 0.7vw);
   color: white;
   transition: background .15s;
+  direction: rtl;
 }
 
 .App-link {
