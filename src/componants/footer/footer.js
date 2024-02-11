@@ -1,12 +1,12 @@
 import './footer.css'
 import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa'
-
+import logo from '../../Assets/logo1.png'
 
 const Footer = () => {
 
     return (
         <footer>
-                <div><img></img></div>
+                <div><img src={logo}></img></div>
                 <div className='hotNum'>الخط الساخن: <span>16546</span></div>
                 <div className='social midea'>
                     <FaYoutube></FaYoutube>

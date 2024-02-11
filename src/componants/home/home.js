@@ -125,10 +125,10 @@ const Home = () => {
                     <p>error 404</p>
                 )}
             </div>
-            <hr></hr>
+            <hr id='hr2'></hr>
             <div className='to-account'>
                 <h6>اعرف تفاصيل اكتر عن حسابك</h6>
-                <button>ملفك الشخصي</button>
+                <Link to='/profile'><button>ملفك الشخصي</button></Link>
             </div>
             <h1>مواد اديوبات</h1>
             <h4>الصف الثالث الثانوي</h4>
@@ -150,7 +150,7 @@ const Home = () => {
                 </ul>
                 <button>اخفاء</button>
             </div>
-            <h2>اختار مدرسك</h2>
+            <h2 id='h2'>اختار مدرسك</h2>
             <select>
                 <option>علمي علوم</option>
                 <option>علمي رياضة</option>

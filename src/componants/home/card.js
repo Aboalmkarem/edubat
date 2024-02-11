@@ -1,4 +1,4 @@
-
+import './home.css'
 
 function Card(prop) {
 
@@ -16,7 +16,7 @@ function Card(prop) {
                         <button>{prop.isSub}</button>
                     </div>
                 </div>
-                <hr id="hr"></hr>
+                <hr id="hr1"></hr>
                 <div className="row2">
                     <button>الدخول للكورس</button>
                     <div className="col2">
