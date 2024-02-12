@@ -3,7 +3,7 @@ import './home.css'
 function Card(prop) {
 
     return(
-        <div className={prop.class}>
+        <div className={prop.class} key={prop.key}>
             <div className='card-img'><img src={prop.img}></img></div>
             <div className='card-content'>
                 <div className="row1">

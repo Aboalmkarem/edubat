@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom'
 import './home.css'
 import Card from './card'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 
 const Home = () => {
     
+    let ul = useRef()
+    let subjects = useRef()
+    let isShowMore = false
     let showEmplyees = true;
     let [courses, setCourses] = useState( 
         [
             {
-                id:"0",
+                key:"0",
                 class:"card course",
                 img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
                 name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
@@ -20,7 +23,7 @@ const Home = () => {
                 publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
             },
             {
-                id:"0",
+                key:"1",
                 class:"card course",
                 img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
                 name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
@@ -30,7 +33,7 @@ const Home = () => {
                 publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
             },
             {
-                id:"0",
+                key:"2",
                 class:"card course",
                 img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
                 name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
@@ -40,7 +43,7 @@ const Home = () => {
                 publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
             },
             {
-                id:"0",
+                key:"3",
                 class:"card course",
                 img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
                 name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
@@ -50,7 +53,7 @@ const Home = () => {
                 publishDate:"السبت، ٣٠ ديسمبر ٢٠٢٣",
             },
             {
-                id:"0",
+                key:"4",
                 class:"card course",
                 img:"https://api.bassthalk.com/courses_images/vKlRaFtg4jj0Td0aCzJVFoDgZGa05UBohSC5AxS2.jpg",
                 name:"الشهر الخامس (محمد صلاح - لغة عربية - 3 ثانوي )",
@@ -64,7 +67,7 @@ const Home = () => {
     let [otherCourses, setOtherCourses] = useState( 
         [
             {
-                id:"0",
+                key:"5",
                 class:"card other-course",
                 img:"https://api.bassthalk.com/courses_images/ktgEiDKxLGPTMwYNxckUL9ycM4il1ipdohlp8TcB.jpg",
                 name:"الاختبار الشامل الثاني- محمد صلاح 3ث (أونلاين)",
@@ -75,6 +78,21 @@ const Home = () => {
             },
         ]
     )
+
+    function show() {
+        if (isShowMore) {
+            isShowMore = false;
+            console.log(isShowMore)
+            ul.current.style.height = '12rem'
+            subjects.current.style.height = 'unset'
+            return
+        } if (!isShowMore) {
+            isShowMore = true
+            console.log(isShowMore)
+            ul.current.style.height = 'max-content'
+            subjects.current.style.height = 'max-content'
+        }
+    }
 
     return (
         <div className='home'>
@@ -132,8 +150,8 @@ const Home = () => {
             </div>
             <h1>مواد اديوبات</h1>
             <h4>الصف الثالث الثانوي</h4>
-            <div className='subjects'>
-                <ul>
+            <div className='subjects' ref={subjects}>
+                <ul ref={ul}>
                     <li><Link to='/'>اللغة العربية</Link></li>
                     <li><Link to='/'>اللغة الالمانية</Link></li>
                     <li><Link to='/'>اللغة الفرنسية</Link></li>
@@ -148,7 +166,7 @@ const Home = () => {
                     <li><Link to='/'>الكيمياء</Link></li>
                     <li><Link to='/'>اللغة الايطالية</Link></li>
                 </ul>
-                <button>اخفاء</button>
+                <button onClick={show}>عرض المزيد</button>
             </div>
             <h2 id='h2'>اختار مدرسك</h2>
             <select>

@@ -180,7 +180,36 @@
     min-height: 20rem;
     margin-inline: auto;
     border-radius: 1rem;
+    padding-block: 1rem;
     background-color: var(--span);
+    font-size: 1.4rem;
+}
+
+.home .subjects ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 0 .7rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 12rem;
+}
+
+.home .subjects li {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    transition: background .15s;
+}
+
+.home .subjects li:hover {
+    background-color: var(--iBack);
+}
+
+.home .subjects button {
+    padding: .4rem ;
+    background-color: var(--main);
 }
 
 .home #h2 {
@@ -192,3 +221,4 @@
     width: fit-content;
     padding: .2rem .4rem;
 }
+
