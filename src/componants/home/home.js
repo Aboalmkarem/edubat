@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import './home.css'
 import Card from './card'
 import { useRef, useState } from 'react';
-
+import teacher from '../../Assets/teacher1.png'
 
 const Home = () => {
     
@@ -175,11 +175,11 @@ const Home = () => {
                 <option>ادبي</option>
             </select>
             <div className='teachers'>
-                <div>
-                    <div><img></img></div>
+                <div className='teacher-card'>
+                    <div className='teacher-img'><img src={teacher}></img></div>
                     <div>
-                        <strong>اسم المدرس</strong>
-                        <p>المادة</p>
+                        <strong>محمد صلاح</strong>
+                        <p>استاذ اللغة العربية</p>
                     </div>
                 </div>
             </div>
